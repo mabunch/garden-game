@@ -10,15 +10,37 @@
         <!-- src needed for jquery -->
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <link rel="stylesheet" href="style.css">
+        
+        <!--font! -->
+        <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
 
     </head>
         <!--This divides our web page into a grid-->
-        <div class= "wrapper">
-    <body>
+    <div class= "wrapper">
+        <body>
 
+            <!--Game Title-->
+            <div class= "box a">
+                <h1 id= "title"> Garden Game! </h1>
+            </div>
+           
+            <!--Shelf Image-->
+            <div class= "box b">
+                <img src="images/shelf.png" alt="shelf">
+            </div>
+
+            <!--start button-->
+            <div class= "box c"> 
+                <h2 id=startGame>Start Game</h2>
+            </div>
+
+            <!--level display-->
+            <div class= "box d"> 
+                <h2 id=startGame>Level:</h2>
+            </div>
                     
-        <script src="game-time.js"></script> <!-- leave at bottom for JS link. -->
-    </body>
-
+            <script src="game-time.js"></script> <!-- leave at bottom for JS link. -->
+        </body>
+    </div>   
    
 </html>

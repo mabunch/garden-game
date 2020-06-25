@@ -16,7 +16,6 @@ $('.start-button').on('click', function() {
 });
 
 function simulateGame(){
-
     let index = level-1; // the index we are primarily concerned with growing. 
     // keep going until the plant has grown to stage 4. 
     while (growth[index] < 4){
@@ -26,7 +25,7 @@ function simulateGame(){
 
 function grow(plantIndex){
     elem = ".pot-" + plantIndex + ".leaves.level-" + level;
-    growth[plantIndex]++;
+    growth[plantIndex]++; // plant stage increases
     console.log(elem);
     $(elem).show();
 }
@@ -41,4 +40,3 @@ function receiveWater(plantIndex){
     elem = '.pot' + plantIndex + ".leaves";
     $(elem).removeClass(".dying");
 }
-

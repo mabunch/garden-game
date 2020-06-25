@@ -49,16 +49,15 @@
   overflow: hidden;
 } */
 
-.leaves {
-  transition: top 0.2s;
-}
 
 .shelf > div > img.leaves {
   display: block;
   position: absolute;
   top: -80px;
+  overflow: hidden;
 }
 
+/* Pots */
 .box.pot-0 {
   grid-column: 1;
   grid-row: 2;
@@ -82,31 +81,41 @@
   display: absolute;
 } */
 /* .pot-1.leaves {
+/* pot leaves */
+.pot-0.leaves {
+  grid-column: 1;
+  grid-row: 1;
+  z-index: -1;
+}
+.pot-1.leaves {
   grid-column: 2;
   grid-row: 1;
- display: absolute;
 }
-
 .pot-2.leaves {
   grid-column: 3;
   grid-row: 1;
-  display: absolute;
 }
 .pot-3.leaves {
   grid-column: 4;
   grid-row: 1;
-  display: absolute;
-} */
+} 
 
 .leaves {
   /* position: absolute; */
   /* display: none; */
+/* pot leaves display */
+.leaves.level-0{
+  position: relative;
 }
+.leaves.level-1, .leaves.level-2, .leaves.level-3 {
+  position: absolute;
+}
+ 
 .dying {
   filter: sepia(100%);
 }
 
-#title {
+.title {
   text-align: center;
   font-size: 67px;
   padding: 0;

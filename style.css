@@ -86,7 +86,6 @@
 .pot-0.leaves {
   grid-column: 1;
   grid-row: 1;
-  z-index: -1;
 }
 .pot-1.leaves {
   grid-column: 2;
@@ -140,15 +139,11 @@
  95% { transform: rotate(-5deg); }
 100% { transform: rotate(0deg); }
 }
-/* 
-.box.pot-0.wiggle {
-  animation: shake-rotate 1.5s;
-}
-
-.box.pot-1.wiggle {
-  animation: shake-rotate 1.5s;
-} */
 
 .wiggle {
   animation: shake-rotate 1.5s;
+}
+
+.success {
+  filter: saturate(150%);
 }

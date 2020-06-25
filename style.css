@@ -53,7 +53,7 @@
 .shelf > div > img.leaves {
   display: block;
   position: absolute;
-  top: -80px;
+  top: -85px;
   overflow: hidden;
 }
 
@@ -61,6 +61,7 @@
 .box.pot-0 {
   grid-column: 1;
   grid-row: 2;
+  
 }
 .box.pot-1 {
   grid-column: 2;
@@ -101,14 +102,11 @@
 } 
 
 .leaves {
-  /* position: absolute; */
-  /* display: none; */
-/* pot leaves display */
+  z-index: -1;
+  padding-left: 10px;
+}
 .leaves.level-0{
   position: relative;
-}
-.leaves.level-1, .leaves.level-2, .leaves.level-3 {
-  position: absolute;
 }
  
 .dying {
@@ -133,4 +131,24 @@
   text-align: center;
   font-size: 45px;
   font-family: 'Hammersmith One', sans-serif;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+ 80% { transform: rotate(0deg); }
+ 85% { transform: rotate(5deg); }
+ 95% { transform: rotate(-5deg); }
+100% { transform: rotate(0deg); }
+}
+/* 
+.box.pot-0.wiggle {
+  animation: shake-rotate 1.5s;
+}
+
+.box.pot-1.wiggle {
+  animation: shake-rotate 1.5s;
+} */
+
+.wiggle {
+  animation: shake-rotate 1.5s;
 }

@@ -9,10 +9,8 @@ $('.start-button').on('click', function() {
     gameOver = false;
     waterNeed = [false, false, false, false];
 
-    while (!gameOver){
-        simulateGame();
-        break;
-    }
+    needsWater(0);
+
 });
 
 function getLeafImagePath(level) {
@@ -34,25 +32,27 @@ $('.pot').click(function() {
     $(leaf).css('top', (topPos - 20) + 'px');
 });
 
-
 function simulateGame(){
     let index = level-1; // the index we are primarily concerned with growing. 
     // keep going until the plant has grown to stage 4. 
-    while (growth[index] < 4){
-        grow(index);
-    }
+    // while (growth[index] < 4){
+    //     needsWater(index);
+    // }
 }
 
-function grow(plantIndex){
-    elem = ".pot-" + plantIndex + ".leaves.level-" + level;
-    growth[plantIndex]++; // plant stage increases
-    console.log(elem);
-    $(elem).show();
-}
+// function grow(plantIndex){
+
+//     elem = ".pot-" + plantIndex + ".leaves.level-" + level;
+//     growth[plantIndex]++; // plant stage increases
+//     console.log(elem);
+//     $(elem).show();
+// }
 
 function needsWater(plantIndex){
-    elem = '.pot' + plantIndex + ".leaves";
-    $(elem).addClass(".dying");
+    elem = '.box.pot.pot-' + plantIndex;
+    console.log(elem);
+    $(elem).effect( "wiggle", { direction: "up", times: 4, distance: 10}, 1000 );
+
     waterNeed[plantIndex] = true;
 }
 

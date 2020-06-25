@@ -13,6 +13,7 @@ $('.start-button').on('click', function() {
     growth = [0,0,0,0];
     gameOver = false;
     waterNeed = [false, false, false, false];
+    $('.leaves').css('top', -85 + 'px');
 
     for (let i=0; i<4; i++){
         elem1 = '.pot-' + i + ".leaves";
@@ -60,6 +61,8 @@ function checkForSuccess(index){
         elem2 = '.box.pot.pot-' + index;
         $(elem1).addClass('success');
         $(elem2).addClass('success');
+        var successAudio = new Audio('sound effects/plantgrown.mp3');
+        successAudio.play();
         checkGameOver();
     }
 }
@@ -84,6 +87,9 @@ $('.pot').click(function() {
     // they have clicked the correct plant that needed water
     if (waterNeed[potIndex]){
         // grow plant
+        var waterAudio = new Audio('sound effects/water.mp3');
+        waterAudio.play();
+
         let leaf = $(this).find('.leaves');
         let topPos = parseInt($(leaf).css('top'), 10);
         console.log('topPos', topPos);

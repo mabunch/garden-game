@@ -14,7 +14,7 @@
     border-radius: 5px;
     padding: 0px;
   }
-  .a {
+  .heading {
     grid-column: 1 / 5;
     justify-content: center;
   }
@@ -24,7 +24,7 @@
     grid-row: 3;
     background-color: lightslategray;
   }
-  .d {
+  .level-display {
     grid-column: 4/5;
     grid-row: 3;
     background-color: pink;
@@ -99,4 +99,12 @@
         font-size: 45px;
         font-family: 'Hammersmith One', sans-serif;
       }
-  
+
+.leaves {
+  position: absolute;
+}
+
+/* .pot {
+  float: left;
+}
+   */

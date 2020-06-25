@@ -149,3 +149,11 @@
 .success {
   filter: saturate(150%);
 }
+#gamebackground{
+  border: 2px solid black;
+  padding: 25px;
+  background: url(backgroundmaybe.jpg);
+  background-repeat: no-repeat;
+  background-size: 1000px 500px;
+}
+}

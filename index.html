@@ -10,7 +10,7 @@
         <!-- src needed for jquery -->
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <link rel="stylesheet" href="style.css">
-        
+
         <!--font! -->
         <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
 
@@ -21,65 +21,71 @@
 
             <!--Game Title-->
             <div class= "box heading">
-                <h1 id= "title"> Garden Game! </h1>
+                <h1 id="title"> Garden Game! </h1>
             </div>
-           
+
             <!--Shelf Image-->
-            <div class= "box shelf">
-                <div class= "box pot-0">
-                    <img src="potb.png" alt="pot" style="width:100px;height:100px;">
+            <div class="box shelf">
+                <div class="box pot pot-0">
+                    <img src="images/plantA/s4a.png" class="pot-0 leaves level-1">
+                    <div class="pot-image-container">
+                        <img src="potb.png" class="pot-image" alt="pot" style="width:100px;height:100px;">
+                    </div>
                 </div>
-                <div class= "box pot-1" >
-                    <img src="potb.png" alt="pot" style="width:100px;height:100px;">
+                <div class="box pot pot-1" >
+                    <img src="images/plantA/s2a.png" class="pot-0 leaves level-1">
+                    <img src="potb.png" class="pot" alt="pot" style="width:100px;height:100px;">
                 </div>
-                <div class= "box pot-2" >
-                    <img src="potb.png" alt="pot" style="width:100px;height:100px;">
+                <div class="box pot pot-2" >
+                    <img src="images/plantA/s3a.png" class="pot-0 leaves level-1">
+                    <img src="potb.png" class="pot" alt="pot" style="width:100px;height:100px;">
                 </div>
-                <div class= "box pot-3" >
-                    <img src="potb.png" alt="pot" style="width:100px;height:100px;">
+                <div class="box pot pot-3" >
+                    <img src="images/plantA/s4a.png" class="pot-0 leaves level-1">
+                    <img src="potb.png" class="pot" alt="pot" style="width:100px;height:100px;">
                 </div>
-                
-                <div class="pot-0 leaves">
+
+                <!-- <div class="pot-0 leaves">
                     <img src="images/plantA/s1a.png" class="pot-0 leaves level-1">
                     <img src="images/plantA/s2a.png" class="pot-0 leaves level-2">
                     <img src="images/plantA/s3a.png" class="pot-0 leaves level-3">
-                    <img src="images/plantA/s4a.png" class="pot-0 leaves level-4"> 
+                    <img src="images/plantA/s4a.png" class="pot-0 leaves level-4">
                 </div>
 
                 <div class="pot-1 leaves">
-                    <!-- <img src="images/plantA/s1a.png" class="pot-1 leaves level-1">
+                    <img src="images/plantA/s1a.png" class="pot-1 leaves level-1">
                     <img src="images/plantA/s2a.png" class="pot-1 leaves level-2">
                     <img src="images/plantA/s3a.png" class="pot-1 leaves level-3">
-                    <img src="images/plantA/s4a.png" class="pot-1 leaves level-4"> -->
+                    <img src="images/plantA/s4a.png" class="pot-1 leaves level-4">
                 </div>
 
                 <div class="pot-2 leaves">
-                    <!-- <img src="images/plantA/s1a.png" class="pot-2 leaves level-1">
+                    <img src="images/plantA/s1a.png" class="pot-2 leaves level-1">
                     <img src="images/plantA/s2a.png" class="pot-2 leaves level-2">
                     <img src="images/plantA/s3a.png" class="pot-2 leaves level-3">
-                    <img src="images/plantA/s4a.png" class="pot-2 leaves level-4"> -->
+                    <img src="images/plantA/s4a.png" class="pot-2 leaves level-4">
                 </div>
 
                 <div class="pot-3 leaves">
-                    <!-- <img src="images/plantA/s1a.png" class="pot-3 leaves level-1">
+                    <img src="images/plantA/s1a.png" class="pot-3 leaves level-1">
                     <img src="images/plantA/s2a.png" class="pot-3 leaves level-2">
                     <img src="images/plantA/s3a.png" class="pot-3 leaves level-3">
-                    <img src="images/plantA/s4a.png" class="pot-3 leaves level-4"> -->
-                </div>                
+                    <img src="images/plantA/s4a.png" class="pot-3 leaves level-4">
+                </div>                 -->
             </div>
 
             <!--start button-->
-            <div class= "box start-button"> 
+            <div class= "box start-button">
                 <h2 id="startGame">Start Game</h2>
             </div>
 
             <!--level display-->
-            <div class= "box level-display"> 
+            <div class= "box level-display">
                 <h2 id="gameStatus">Level:</h2>
             </div>
-                    
+
             <script src="game-time.js"></script> <!-- leave at bottom for JS link. -->
         </body>
-    </div>   
-   
+    </div>
+
 </html>

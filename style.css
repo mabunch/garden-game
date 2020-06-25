@@ -35,8 +35,30 @@
   height: 300px;
   grid-gap: 10px;
   align-items: baseline;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+.shelf > div {
+  position: relative;
+}
+
+/* .pot-image-container {
+  position: absolute;
+  top: -80px;
+
+  overflow: hidden;
+} */
+
+.leaves {
+  transition: top 0.2s;
+}
+
+.shelf > div > img.leaves {
+  display: block;
+  position: absolute;
+  top: -80px;
+}
+
 .box.pot-0 {
   grid-column: 1;
   grid-row: 2;
@@ -54,11 +76,11 @@
   grid-row: 2;
 }
 
-.pot-0.leaves {
+/* .pot-0.leaves {
   grid-column: 1;
   grid-row: 1;
   display: absolute;
-}
+} */
 /* .pot-1.leaves {
   grid-column: 2;
   grid-row: 1;
@@ -77,7 +99,7 @@
 } */
 
 .leaves {
-  position: absolute;
+  /* position: absolute; */
   /* display: none; */
 }
 .dying {

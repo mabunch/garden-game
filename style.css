@@ -1,12 +1,13 @@
 .wrapper {
-  margin: 20px 20px 20px 20px;
+  margin: auto;
   width: auto;
   height: auto;
   display: grid;
   grid-gap: px;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(3, auto);
-  align-content: end;
+  padding: 0;
+  
   justify-content: center;
 }
 .box {
@@ -14,18 +15,10 @@
   border-radius: 5px;
   padding: 0px;
 }
-.heading {
+.potatoe {
   grid-column: 2;
   grid-row: 1;
   align-content: center;
-}
-.title {
-  text-align: center;
-  font-size: 67px;
-  padding: 0;
-  margin: 0;
-  font-family: 'Mali', cursive;
-  color: aliceblue;
 }
 
 .start-button {
@@ -34,12 +27,18 @@
   background-color: whitesmoke;
 }
 .instructions {
-  grid-column: 1;
-  grid-row: 2;
+  grid-column: 3;
+  grid-row: 3;
+  
+  
 }
-.announcements {
+.tired {
   grid-column: 3;
   grid-row: 2;
+}
+.space {
+  grid-column: 3;
+  grid-row: 1;
 }
 .layer1 {
   position: absolute;
@@ -48,11 +47,11 @@
 .layer2 {
   position: absolute;
   z-index: 2;
-  font-family: 'Mali', cursive;
+  font-family: 'Pangolin', cursive;
   color: white;
-  padding-left: 10px;
-  padding-top: 60px;
-  align-content: center;
+  padding-top: 30px;
+  padding-left: 25px;
+  padding right: 15px;
   font-size: 15px;
 }
 

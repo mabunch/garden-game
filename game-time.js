@@ -65,16 +65,16 @@ function checkGameOver(){
 function promptGameOver(num_plants){
     let message;
     if (num_plants === 4){
-        message = "4 out of 4! \n You might be ready for your own, real-life plants!"
+        message = "A+ work pal!"
     }
     else if (num_plants === 3){
-        message = "3 out of 4! \n You may not pay the closest attention to your plants, but you are doing your best!";
+        message = "a solid C+!";
     }
     else if (num_plants === 2){
-        message = "2 out of 4. \n Not terrible, but you should pay a bit closer attention to your plants.";
+        message = "You can do better";
     }
     else {
-        message = "You probably are not ready for your own house plants.";
+        message = "u r a loser";
     }
     $('.game-message').text(message);
     console.log(message);

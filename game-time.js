@@ -3,8 +3,6 @@ let growth;
 let gameOver;
 let waterNeed;
 let max_level = 5;
-let currentPot = null;
-let gameJustPlayed = false;
 
 $('.start-button').on('click', function() {
     // reset everything.
@@ -13,6 +11,7 @@ $('.start-button').on('click', function() {
     growth = [0,0,0,0];
     gameOver = false;
     waterNeed = [false, false, false, false];
+    $('.game-message').text("You Got This!");
     $('.leaves').css('top', -85 + 'px');
 
     // this is important for if they press start after a game just ended to reset the filters.
@@ -64,18 +63,21 @@ function checkGameOver(){
 
 // when the game is over, this functions alerts the user. 
 function promptGameOver(num_plants){
+    let message;
     if (num_plants === 4){
-        console.log("Wow! You did great. You are definitely ready for your own, real life house plants!");
+        message = "4 out of 4! \n You might be ready for your own, real-life plants!"
     }
     else if (num_plants === 3){
-        console.log("You are almost ready for your own plants. Sometimes you don't pay the closest attention, but you are trying your best!");
+        message = "3 out of 4! \n You may not pay the closest attention to your plants, but you are doing your best!";
     }
     else if (num_plants === 2){
-        console.log("You should pay a bit closer attention to your plants!");
+        message = "2 out of 4. \n Not terrible, but you should pay a bit closer attention to your plants.";
     }
     else {
-        console.log("You are probably NOT ready for your own house plants. ");
+        message = "You probably are not ready for your own house plants.";
     }
+    $('.game-message').text(message);
+    console.log(message);
     gameOver = true;
 }
 

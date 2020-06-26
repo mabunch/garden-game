@@ -28,11 +28,6 @@
   color: aliceblue;
 }
 
-/* #startGame {
-  text-align: center;
-  font-size: 45px;
-  font-family: 'Mali', cursive;
-} */
 .start-button {
   grid-column: 2;
   grid-row: 3;
@@ -46,6 +41,21 @@
   grid-column: 3;
   grid-row: 2;
 }
+.layer1 {
+  position: absolute;
+  z-index: 1;
+}
+.layer2 {
+  position: absolute;
+  z-index: 2;
+  font-family: 'Mali', cursive;
+  color: white;
+  padding-left: 10px;
+  padding-top: 60px;
+  align-content: center;
+  font-size: 15px;
+}
+
 
 /* backgrounds */
 #gamebackground{

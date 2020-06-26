@@ -3,7 +3,7 @@
   width: auto;
   height: auto;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 0px;
   grid-template-columns: repeat(1, auto);
   grid-template-rows: repeat(3, auto);
   align-content: end;
@@ -61,7 +61,6 @@
 .box.pot-0 {
   grid-column: 1;
   grid-row: 2;
-  
 }
 .box.pot-1 {
   grid-column: 2;
@@ -99,9 +98,9 @@
   grid-column: 4;
   grid-row: 1;
 } 
-
-
-
+.pot{
+  z-index: 1;
+}
 .leaves {
   z-index: -1;
   padding-left: 10px;
@@ -110,10 +109,6 @@
   position: relative;
 }
  
-.dying {
-  filter: sepia(100%);
-}
-
 .title {
   text-align: center;
   font-size: 67px;
@@ -130,7 +125,7 @@
 }
 
 #background2 {
-  background-color: lightslategrey;
+  background-color: white;
 }
 
 @keyframes wiggle {
@@ -148,10 +143,14 @@
 .success {
   filter: saturate(150%);
 }
+
+.dead {
+  filter: opacity(50%);
+}
 #gamebackground{
   padding: 25px;
-  background: url(backgroundmaybe.jpg);
+  background: url(backgroundmaybe2.png);
   background-repeat: no-repeat;
-  background-size: 1000px 500px;
- 
+  background-size: 615px 350px;
+
 }

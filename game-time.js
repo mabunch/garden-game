@@ -104,9 +104,7 @@ function checkForSuccess(index){
 
 // the game heavily revolves around responding to the user's clicks. 
 $('.pot').click(function() {
-
     checkGameOver();
-    console.log('clicked a pot');
     // did it need water? if so, grow upon click.  
     let idSplit = $(this).attr('id').split('.'); 
     let potIndex = idSplit[idSplit.length-1];
@@ -122,7 +120,7 @@ $('.pot').click(function() {
 
         let leaf = $(this).find('.leaves');
         let topPos = parseInt($(leaf).css('top'), 10);
-        console.log('topPos', topPos);
+        // console.log('topPos', topPos);
         $(leaf).css('top', (topPos - 20) + 'px');
 
         // they are satisfied now and their stage has increased.
@@ -134,7 +132,7 @@ $('.pot').click(function() {
         checkForSuccess(potIndex);
         // find next pot to be watered.
         if (!gameOver){
-            setTimeout(function() { needsWater(findPot()) }, 1500);
+            setTimeout(function() { needsWater(findPot()) }, 1000);
         }
     }
     else if (!gameOver) { // clicked the wrong pot.

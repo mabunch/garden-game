@@ -18,11 +18,39 @@
   grid-column: 1;
   grid-row: 1;
 }
+.title {
+  text-align: center;
+  font-size: 67px;
+  padding: 0;
+  margin: 0;
+  font-family: 'Mali', cursive;
+  color: aliceblue;
+}
+
+/* #startGame {
+  text-align: center;
+  font-size: 45px;
+  font-family: 'Mali', cursive;
+} */
 .start-button {
   grid-column: 1;
   grid-row: 3;
   background-color: whitesmoke;
 }
+
+/* backgrounds */
+#gamebackground{
+  padding: 25px;
+  background: url(backgroundmaybe2.png);
+  background-repeat: no-repeat;
+  background-size: 615px 350px;
+}
+
+#background2 {
+  background-color: white;
+}
+
+/* more display features */
 .level-display {
   grid-column: 4/5;
   grid-row: 3;
@@ -41,14 +69,6 @@
 .shelf > div {
   position: relative;
 }
-
-/* .pot-image-container {
-  position: absolute;
-  top: -80px;
-
-  overflow: hidden;
-} */
-
 
 .shelf > div > img.leaves {
   display: block;
@@ -74,14 +94,13 @@
   grid-column: 4;
   grid-row: 2;
 }
-
-/* .pot-0.leaves {
-  grid-column: 1;
-  grid-row: 1;
-  display: absolute;
-} */
-/* .pot-1.leaves {
-/* pot leaves */
+.pot{
+  z-index: 1;
+}
+.leaves {
+  z-index: -1;
+  padding-left: 10px;
+}
 .pot-0.leaves {
   grid-column: 1;
   grid-row: 1;
@@ -98,46 +117,13 @@
   grid-column: 4;
   grid-row: 1;
 } 
-.pot{
-  z-index: 1;
-}
-.leaves {
-  z-index: -1;
-  padding-left: 10px;
-}
 .leaves.level-0{
   position: relative;
 }
- 
-.title {
-  text-align: center;
-  font-size: 67px;
-  padding: 0;
-  margin: 0;
-  font-family: 'Mali', cursive;
-  color: aliceblue;
-}
 
-#startGame {
-  text-align: center;
-  font-size: 45px;
-  font-family: 'Mali', cursive;
-}
-
-#background2 {
-  background-color: white;
-}
-
-@keyframes wiggle {
-  0% { transform: rotate(0deg); }
- 80% { transform: rotate(0deg); }
- 85% { transform: rotate(5deg); }
- 95% { transform: rotate(-5deg); }
-100% { transform: rotate(0deg); }
-}
-
+/* animations and filters */
 .wiggle {
-  animation: shake-rotate 1.5s;
+  animation: shake-rotate 0.75s;
 }
 
 .success {
@@ -146,11 +132,4 @@
 
 .dead {
   filter: opacity(50%);
-}
-#gamebackground{
-  padding: 25px;
-  background: url(backgroundmaybe2.png);
-  background-repeat: no-repeat;
-  background-size: 615px 350px;
-
 }

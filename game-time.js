@@ -4,9 +4,9 @@ let gameOver;
 let waterNeed;
 let max_level = 5;
 let currentPot = null;
+let gameJustPlayed = false;
 
 $('.start-button').on('click', function() {
-
     // reset everything.
     console.log("clicked start");
     level = 1;
@@ -20,7 +20,9 @@ $('.start-button').on('click', function() {
         elem2 = '.box.pot.pot-' + i;
         $(elem1).removeClass('success');
         $(elem2).removeClass('success');
+        $(elem2).removeClass('dead');
     }
+
     needsWater(findPot());
 });
 
@@ -31,7 +33,7 @@ function findPot(){
     while (!foundFree){
         // checkGameOver();
         check = Math.floor(Math.random() * 4); // random index 0-3
-        if (growth[check] < max_level){
+        if (growth[check] < max_level && growth[check] > -1){
             foundFree = true;
         }
     }
@@ -40,11 +42,14 @@ function findPot(){
 
 // if all of the plants have reached the "max-level" then you win!
 function checkGameOver(){
+
+    // game won.
     if (growth[0] === max_level && growth[1] === max_level && growth[2] === max_level &&
         growth[3] === max_level){
             gameOver = true;
             console.log("successfully won game!");
-        }
+        } 
+
 }
 
 function needsWater(plantIndex){
@@ -81,8 +86,9 @@ $('.pot').click(function() {
     // did it need water? if so, grow upon click.  
     let idSplit = $(this).attr('id').split('.'); 
     let potIndex = idSplit[idSplit.length-1];
-    console.log("pot Index: " + potIndex);
-    console.log("needs water? " + waterNeed[potIndex]);
+    elem = '.box.pot.pot-' + potIndex;
+    console.log("pot clicked: " + potIndex);
+    // console.log("needs water? " + waterNeed[potIndex]);
 
     // they have clicked the correct plant that needed water
     if (waterNeed[potIndex]){
@@ -98,16 +104,21 @@ $('.pot').click(function() {
         // they are satisfied now and their stage has increased.
         waterNeed[potIndex] = false;
         growth[potIndex]++;
-        elem = '.box.pot.pot-' + potIndex;
         $(elem).removeClass('wiggle');
 
         // check if this plant has been fully grown, if so then ta-da!
         checkForSuccess(potIndex);
-
         // find next pot to be watered.
         if (!gameOver){
             setTimeout(function() { needsWater(findPot()) }, 1500);
         }
+    }
+    else { // clicked the wrong pot.
+        let leaf = $(this).find('.leaves');
+        $(elem).addClass('dead');
+        growth[potIndex] = -1;
+        waterNeed[potIndex] = false;
+        $(elem).removeClass('wiggle');
     }
 });
 

@@ -3,7 +3,7 @@
   width: auto;
   height: auto;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 0px;
   grid-template-columns: repeat(1, auto);
   grid-template-rows: repeat(3, auto);
   align-content: end;
@@ -130,7 +130,7 @@
 }
 
 #background2 {
-  background-color: lightslategrey;
+  background-color: white;
 }
 
 @keyframes wiggle {
@@ -150,8 +150,8 @@
 }
 #gamebackground{
   padding: 25px;
-  background: url(backgroundmaybe.jpg);
+  background: url(backgroundmaybe2.png);
   background-repeat: no-repeat;
-  background-size: 1000px 500px;
+  background-size: 615px 350px;
  
 }

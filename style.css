@@ -3,7 +3,7 @@
   width: auto;
   height: auto;
   display: grid;
-  grid-gap: 0px;
+  grid-gap: px;
   grid-template-columns: repeat(1, auto);
   grid-template-rows: repeat(3, auto);
   align-content: end;
